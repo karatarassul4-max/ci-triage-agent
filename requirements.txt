@@ -1,0 +1,3 @@
+qroq
+python-dotenv
+pytest
