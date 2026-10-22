@@ -1,0 +1,15 @@
+{
+  "id": "tinydb-e83efcd",
+  "source": "real",
+  "repo_url": "https://github.com/msiemens/tinydb.git",
+  "broken_sha": "18d73a15066a04c77f19ae9a8c03d582bd344c0d",
+  "fix_sha": "e83efcdf7df0a57db52c650f4bdf4fd9ae084f87",
+  "failing_tests": [
+    "tests/test_queries.py::test_regex_flags_affect_hash_and_query_cache"
+  ],
+  "category": "code_bug",
+  "gold_files": [
+    "tinydb/queries.py"
+  ],
+  "split": "test"
+}

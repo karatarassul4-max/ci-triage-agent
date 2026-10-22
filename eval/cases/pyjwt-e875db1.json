@@ -1,0 +1,19 @@
+{
+  "id": "pyjwt-e875db1",
+  "source": "real",
+  "repo_url": "https://github.com/jpadilla/pyjwt.git",
+  "broken_sha": "bcb6ee34c2cd46005576e294eb5aba0c496a80d5",
+  "fix_sha": "e875db1357f38450a7c2693aea728c931ddadfe3",
+  "failing_tests": [
+    "tests/test_cli.py::TestCli::test_encode_header_raises_value_error_bad_dict",
+    "tests/test_cli.py::TestCli::test_decode_payload_terminal_tty",
+    "tests/test_cli.py::TestCli::test_encode_decode[1234-{}-Vader-Sith-None-None]",
+    "tests/test_cli.py::TestCli::test_encode_decode[4567-{\"typ\":\"test\"}-Anakin-Jedi-+1-None]",
+    "tests/test_cli.py::TestCli::test_encode_decode[4321--Padme-Queen-4070926800-true]"
+  ],
+  "category": "code_bug",
+  "gold_files": [
+    "jwt/__main__.py"
+  ],
+  "split": "test"
+}

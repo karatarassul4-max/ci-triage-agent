@@ -11,5 +11,5 @@
   "gold_files": [
     "jwt/api_jwt.py"
   ],
-  "split": "unassigned"
+  "split": "test"
 }

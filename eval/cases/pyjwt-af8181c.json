@@ -1,0 +1,16 @@
+{
+  "id": "pyjwt-af8181c",
+  "source": "real",
+  "repo_url": "https://github.com/jpadilla/pyjwt.git",
+  "broken_sha": "ba4853a75fb9676362da17f67d0f64bd18afd4e1",
+  "fix_sha": "af8181ca0bec5e6b372fbba9afbe23702b787ceb",
+  "failing_tests": [
+    "tests/test_algorithms.py::TestAlgorithms::test_hmac_from_jwk_should_reject_empty_key",
+    "tests/test_api_jws.py::TestJWS::test_pyjwk_rejects_empty_hmac_key"
+  ],
+  "category": "code_bug",
+  "gold_files": [
+    "jwt/algorithms.py"
+  ],
+  "split": "dev"
+}

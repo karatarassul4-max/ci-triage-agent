@@ -1,0 +1,16 @@
+{
+  "id": "pyjwt-8de4428",
+  "source": "real",
+  "repo_url": "https://github.com/jpadilla/pyjwt.git",
+  "broken_sha": "cfe52613ca0fad1535bcf5b5753aca5760043cae",
+  "fix_sha": "8de44287752f9d2c0112bb3062389462d56ead86",
+  "failing_tests": [
+    "tests/test_api_jws.py::TestJWS::test_encode_with_headers_alg_none"
+  ],
+  "category": "code_bug",
+  "gold_files": [
+    "jwt/api_jws.py",
+    "jwt/api_jwt.py"
+  ],
+  "split": "test"
+}

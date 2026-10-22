@@ -1,0 +1,15 @@
+{
+  "id": "pyjwt-fccf6d8",
+  "source": "real",
+  "repo_url": "https://github.com/jpadilla/pyjwt.git",
+  "broken_sha": "06573692ebcdec8831c3927513b3e87c31fbbb62",
+  "fix_sha": "fccf6d82c47103d3b12fcaf9d21ba1f4427b4fb3",
+  "failing_tests": [
+    "tests/test_algorithms.py::TestAlgorithms::test_hmac_prepare_key_rejects_bom_prefixed_jwk_json"
+  ],
+  "category": "code_bug",
+  "gold_files": [
+    "jwt/algorithms.py"
+  ],
+  "split": "test"
+}

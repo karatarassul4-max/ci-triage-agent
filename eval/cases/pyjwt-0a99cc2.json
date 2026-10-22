@@ -1,0 +1,15 @@
+{
+  "id": "pyjwt-0a99cc2",
+  "source": "real",
+  "repo_url": "https://github.com/jpadilla/pyjwt.git",
+  "broken_sha": "4e15dbd9aaef56b78ac8f885220d94f785d2b30c",
+  "fix_sha": "0a99cc2427c751275ea0002acca9ba0c07c25834",
+  "failing_tests": [
+    "tests/test_api_jwt.py::TestJWT::test_decode_works_if_iat_is_str_of_a_number"
+  ],
+  "category": "code_bug",
+  "gold_files": [
+    "jwt/api_jwt.py"
+  ],
+  "split": "dev"
+}

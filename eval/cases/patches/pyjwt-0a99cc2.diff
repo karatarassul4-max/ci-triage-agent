@@ -1,0 +1,15 @@
+diff --git a/jwt/api_jwt.py b/jwt/api_jwt.py
+index fd8a8bf..5664949 100644
+--- a/jwt/api_jwt.py
++++ b/jwt/api_jwt.py
+@@ -265,9 +265,8 @@ class PyJWT:
+         now: float,
+         leeway: float,
+     ) -> None:
+-        iat = payload["iat"]
+         try:
+-            int(iat)
++            iat = int(payload["iat"])
+         except ValueError:
+             raise InvalidIssuedAtError("Issued At claim (iat) must be an integer.")
+         if iat > (now + leeway):

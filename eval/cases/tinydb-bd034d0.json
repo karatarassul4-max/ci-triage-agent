@@ -1,0 +1,16 @@
+{
+  "id": "tinydb-bd034d0",
+  "source": "real",
+  "repo_url": "https://github.com/msiemens/tinydb.git",
+  "broken_sha": "19066e03139e904c24410e23901e4b069d715a2e",
+  "fix_sha": "bd034d0e95d64a1da0e86387daa950eed3534fff",
+  "failing_tests": [
+    "tests/test_tinydb.py::test_insert_multiple_mixed_document_and_dict[memory]",
+    "tests/test_tinydb.py::test_insert_multiple_mixed_document_and_dict[json]"
+  ],
+  "category": "code_bug",
+  "gold_files": [
+    "tinydb/table.py"
+  ],
+  "split": "dev"
+}

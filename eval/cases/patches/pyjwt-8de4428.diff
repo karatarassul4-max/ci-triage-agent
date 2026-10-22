@@ -1,0 +1,37 @@
+diff --git a/jwt/api_jws.py b/jwt/api_jws.py
+index 6d13699..6cefb2c 100644
+--- a/jwt/api_jws.py
++++ b/jwt/api_jws.py
+@@ -77,7 +77,7 @@ class PyJWS:
+         self,
+         payload: bytes,
+         key: str,
+-        algorithm: str = "HS256",
++        algorithm: Optional[str] = "HS256",
+         headers: Optional[Dict] = None,
+         json_encoder: Optional[Type[json.JSONEncoder]] = None,
+     ) -> str:
+@@ -86,6 +86,10 @@ class PyJWS:
+         if algorithm is None:
+             algorithm = "none"
+ 
++        # Prefer headers["alg"] if present to algorithm parameter.
++        if headers and "alg" in headers and headers["alg"]:
++            algorithm = headers["alg"]
++
+         if algorithm not in self._valid_algs:
+             pass
+ 
+diff --git a/jwt/api_jwt.py b/jwt/api_jwt.py
+index 55a8f29..48a9316 100644
+--- a/jwt/api_jwt.py
++++ b/jwt/api_jwt.py
+@@ -38,7 +38,7 @@ class PyJWT:
+         self,
+         payload: Dict[str, Any],
+         key: str,
+-        algorithm: str = "HS256",
++        algorithm: Optional[str] = "HS256",
+         headers: Optional[Dict] = None,
+         json_encoder: Optional[Type[json.JSONEncoder]] = None,
+     ) -> str:

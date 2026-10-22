@@ -1,0 +1,31 @@
+diff --git a/jwt/api_jwt.py b/jwt/api_jwt.py
+index 70a5e53..55a8f29 100644
+--- a/jwt/api_jwt.py
++++ b/jwt/api_jwt.py
+@@ -177,19 +177,18 @@ class PyJWT:
+             raise ExpiredSignatureError("Signature has expired")
+ 
+     def _validate_aud(self, payload, audience):
+-        if audience is None and "aud" not in payload:
+-            return
++        if audience is None:
++            if "aud" not in payload or not payload["aud"]:
++                return
++            # Application did not specify an audience, but
++            # the token has the 'aud' claim
++            raise InvalidAudienceError("Invalid audience")
+ 
+-        if audience is not None and "aud" not in payload:
++        if "aud" not in payload or not payload["aud"]:
+             # Application specified an audience, but it could not be
+             # verified since the token does not contain a claim.
+             raise MissingRequiredClaimError("aud")
+ 
+-        if audience is None and "aud" in payload:
+-            # Application did not specify an audience, but
+-            # the token has the 'aud' claim
+-            raise InvalidAudienceError("Invalid audience")
+-
+         audience_claims = payload["aud"]
+ 
+         if isinstance(audience_claims, str):

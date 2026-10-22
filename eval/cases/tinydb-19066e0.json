@@ -1,0 +1,15 @@
+{
+  "id": "tinydb-19066e0",
+  "source": "real",
+  "repo_url": "https://github.com/msiemens/tinydb.git",
+  "broken_sha": "4aa53111d72c9cbaafcdc039211caf49f4face6f",
+  "fix_sha": "19066e03139e904c24410e23901e4b069d715a2e",
+  "failing_tests": [
+    "tests/test_utils.py::test_lru_cache_none_value"
+  ],
+  "category": "code_bug",
+  "gold_files": [
+    "tinydb/utils.py"
+  ],
+  "split": "test"
+}
