@@ -1,0 +1,17 @@
+{
+  "id": "pyjwt-7bf3252",
+  "source": "real",
+  "repo_url": "https://github.com/jpadilla/pyjwt.git",
+  "broken_sha": "1d41a6478e1562e68ff667fcd703356acf085f68",
+  "fix_sha": "7bf32526738fe837387bdedd4849a4a525c33a79",
+  "failing_tests": [
+    "tests/test_api_jws.py::TestJWS::test_decode_accepts_padded_crypto_segment",
+    "tests/test_api_jws.py::TestJWS::test_decode_accepts_canonical_base64url_padding[Zg==-f]",
+    "tests/test_api_jws.py::TestJWS::test_decode_accepts_canonical_base64url_padding[Zm8=-fo]"
+  ],
+  "category": "code_bug",
+  "gold_files": [
+    "jwt/api_jws.py"
+  ],
+  "split": "unassigned"
+}

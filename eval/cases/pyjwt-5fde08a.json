@@ -1,0 +1,15 @@
+{
+  "id": "pyjwt-5fde08a",
+  "source": "real",
+  "repo_url": "https://github.com/jpadilla/pyjwt.git",
+  "broken_sha": "171062d2d734315272a901100aa4b109f2fc3c19",
+  "fix_sha": "5fde08a6cf906aa7698de2d6391d88b73006b17b",
+  "failing_tests": [
+    "tests/test_api_jwt.py::TestJWT::test_decode_deeply_nested_payload_throws_decode_error"
+  ],
+  "category": "code_bug",
+  "gold_files": [
+    "jwt/api_jwt.py"
+  ],
+  "split": "unassigned"
+}

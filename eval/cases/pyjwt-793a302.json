@@ -1,0 +1,26 @@
+{
+  "id": "pyjwt-793a302",
+  "source": "real",
+  "repo_url": "https://github.com/jpadilla/pyjwt.git",
+  "broken_sha": "293d9972ce52b192b863480c56876621e380abf5",
+  "fix_sha": "793a30279584fcf2db889363b0db1f6d38d74e97",
+  "failing_tests": [
+    "tests/test_api_jwt.py::TestJWT::test_decode_raises_clean_error_if_claim_is_non_numeric_type[value0-exp]",
+    "tests/test_api_jwt.py::TestJWT::test_decode_raises_clean_error_if_claim_is_non_numeric_type[value0-nbf]",
+    "tests/test_api_jwt.py::TestJWT::test_decode_raises_clean_error_if_claim_is_non_numeric_type[value0-iat]",
+    "tests/test_api_jwt.py::TestJWT::test_decode_raises_clean_error_if_claim_is_non_numeric_type[value1-exp]",
+    "tests/test_api_jwt.py::TestJWT::test_decode_raises_clean_error_if_claim_is_non_numeric_type[value1-nbf]",
+    "tests/test_api_jwt.py::TestJWT::test_decode_raises_clean_error_if_claim_is_non_numeric_type[value1-iat]",
+    "tests/test_api_jwt.py::TestJWT::test_decode_raises_clean_error_if_claim_is_non_numeric_type[None-exp]",
+    "tests/test_api_jwt.py::TestJWT::test_decode_raises_clean_error_if_claim_is_non_numeric_type[None-nbf]",
+    "tests/test_api_jwt.py::TestJWT::test_decode_raises_clean_error_if_claim_is_non_numeric_type[None-iat]",
+    "tests/test_api_jwt.py::TestJWT::test_decode_raises_clean_error_if_claim_is_non_numeric_type[inf-exp]",
+    "tests/test_api_jwt.py::TestJWT::test_decode_raises_clean_error_if_claim_is_non_numeric_type[inf-nbf]",
+    "tests/test_api_jwt.py::TestJWT::test_decode_raises_clean_error_if_claim_is_non_numeric_type[inf-iat]"
+  ],
+  "category": "code_bug",
+  "gold_files": [
+    "jwt/api_jwt.py"
+  ],
+  "split": "unassigned"
+}
