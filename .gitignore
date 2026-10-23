@@ -220,5 +220,8 @@ __marimo__/
 .streamlit/secrets.toml
 
 eval/results/
+eval/workdir/
+eval/results/
 usage.jsonl
 traces/
+hello_qroq.py
