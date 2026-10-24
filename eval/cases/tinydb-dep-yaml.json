@@ -1,0 +1,18 @@
+{
+  "id": "tinydb-dep-yaml",
+  "repo": "tinydb",
+  "source": "handmade",
+  "repo_url": "https://github.com/msiemens/tinydb.git",
+  "base_sha": "edff96aeb2616402e9489d46e90a592c05565621",
+  "broken_sha": "a890af4b85a27fa6bdb80ebdfa406622867b4f44",
+  "fix_sha": null,
+  "failing_tests": [],
+  "category": "dependency",
+  "gold_files": [
+    "tinydb/storages.py",
+    "pyproject.toml"
+  ],
+  "split": "test",
+  "fix_verified": false,
+  "description": "Code imports PyYAML, which is not declared as a dependency."
+}

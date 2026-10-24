@@ -16,8 +16,10 @@ SYSTEM = (
     'You receive the output of a failed pytest run. '
     'Find the root cause of the first real error, not its consequences. '
     'Classify it as code_bug, flaky_test, dependency, infra or config. '
-    'Name the non-test source files that most likely contain the root cause. '
-    'You may infer them from test names, imports and the traceback. '
+    'Name the files that most likely contain the root cause. '
+    'This is usually a source file, but for a flaky or broken test it can be the test file, '
+    'and for a dependency or configuration problem it can be a config file. '
+    'You may infer paths from test names, imports and the traceback. '
     'If you are unsure, lower the confidence. '
     'Answer only by calling submit_diagnosis.'
 )
@@ -37,7 +39,7 @@ DIAGNOSIS_TOOL = {
                 'root_cause_files': {
                     'type': 'array',
                     'items': {'type': 'string'},
-                    'description': 'Paths of non-test files that contain the root cause',
+                    'description': 'Paths of files that contain the root cause',
                 },
                 'explanation': {'type': 'string'},
                 'confidence': {'type': 'number', 'description': 'A number from 0 to 1'},
@@ -64,7 +66,7 @@ def extract_failure(log, max_lines=60):
 
 
 def repo_dir(case):
-    name = case['id'].rsplit('-', 1)[0]
+    name = case.get('repo') or case['id'].rsplit('-', 1)[0]
     return str((WORKDIR / name).resolve())
 
 

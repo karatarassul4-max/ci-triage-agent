@@ -1,0 +1,18 @@
+{
+  "id": "pyjwt-dep-requests",
+  "repo": "pyjwt",
+  "source": "handmade",
+  "repo_url": "https://github.com/jpadilla/pyjwt.git",
+  "base_sha": "16231abfd1d8eab4953e8779b3017b859c88565e",
+  "broken_sha": "ae1b7e2145a7bd41195a50d956c422ca80b6af22",
+  "fix_sha": null,
+  "failing_tests": [],
+  "category": "dependency",
+  "gold_files": [
+    "jwt/utils.py",
+    "pyproject.toml"
+  ],
+  "split": "dev",
+  "fix_verified": false,
+  "description": "Code imports a third-party package that is not declared as a dependency."
+}

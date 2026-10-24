@@ -1,0 +1,17 @@
+{
+  "id": "tinydb-config-minversion",
+  "repo": "tinydb",
+  "source": "handmade",
+  "repo_url": "https://github.com/msiemens/tinydb.git",
+  "base_sha": "edff96aeb2616402e9489d46e90a592c05565621",
+  "broken_sha": "e0bfcc4d814aa3f7f854961b6259a2aa3d69d3e4",
+  "fix_sha": null,
+  "failing_tests": [],
+  "category": "config",
+  "gold_files": [
+    "pytest.ini"
+  ],
+  "split": "dev",
+  "fix_verified": false,
+  "description": "Minimum pytest version in the config is higher than any released version."
+}

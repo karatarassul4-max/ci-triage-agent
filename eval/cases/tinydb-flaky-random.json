@@ -1,0 +1,19 @@
+{
+  "id": "tinydb-flaky-random",
+  "repo": "tinydb",
+  "source": "handmade",
+  "repo_url": "https://github.com/msiemens/tinydb.git",
+  "base_sha": "edff96aeb2616402e9489d46e90a592c05565621",
+  "broken_sha": "0e3d671870c05fbd5bde14a5b0a7ce95f862ee8f",
+  "fix_sha": null,
+  "failing_tests": [
+    "tests/test_flaky_random.py::test_random_document_is_found"
+  ],
+  "category": "flaky_test",
+  "gold_files": [
+    "tests/test_flaky_random.py"
+  ],
+  "split": "dev",
+  "fix_verified": false,
+  "description": "Test draws a random id outside the range of inserted documents."
+}

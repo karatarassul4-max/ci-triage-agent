@@ -1,0 +1,17 @@
+{
+  "id": "pyjwt-config-duplicate-table",
+  "repo": "pyjwt",
+  "source": "handmade",
+  "repo_url": "https://github.com/jpadilla/pyjwt.git",
+  "base_sha": "16231abfd1d8eab4953e8779b3017b859c88565e",
+  "broken_sha": "14ed9fc6a7f88faac10b952d583342fe31867e68",
+  "fix_sha": null,
+  "failing_tests": [],
+  "category": "config",
+  "gold_files": [
+    "pyproject.toml"
+  ],
+  "split": "test",
+  "fix_verified": false,
+  "description": "The same TOML table is declared twice (typical merge leftover)."
+}

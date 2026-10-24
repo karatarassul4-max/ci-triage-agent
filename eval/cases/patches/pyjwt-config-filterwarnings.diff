@@ -1,0 +1,12 @@
+diff --git a/pyproject.toml b/pyproject.toml
+index 483fd97..bbd2440 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -116,6 +116,7 @@ module = [
+ addopts = "-ra"
+ filterwarnings = [
+     "error",
++    "ignore::jwt.warnings.InsecureKeyLengthWarning",
+ ]
+ testpaths = [
+     "tests",

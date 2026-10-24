@@ -1,0 +1,19 @@
+{
+  "id": "pyjwt-flaky-set-order",
+  "repo": "pyjwt",
+  "source": "handmade",
+  "repo_url": "https://github.com/jpadilla/pyjwt.git",
+  "base_sha": "16231abfd1d8eab4953e8779b3017b859c88565e",
+  "broken_sha": "524ab1999ee597f36c05c54cb7b6b7259e6dd57c",
+  "fix_sha": null,
+  "failing_tests": [
+    "tests/test_flaky_order.py::test_algorithm_names_keep_order"
+  ],
+  "category": "flaky_test",
+  "gold_files": [
+    "tests/test_flaky_order.py"
+  ],
+  "split": "test",
+  "fix_verified": false,
+  "description": "Test relies on iteration order of a set of strings (hash randomization)."
+}

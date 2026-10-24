@@ -1,7 +1,7 @@
 import subprocess
 
 
-def run(cmd, cwd, timeout=300):
+def run(cmd, cwd, timeout=300, env=None):
     try:
         result = subprocess.run(
             cmd,
@@ -10,6 +10,7 @@ def run(cmd, cwd, timeout=300):
             encoding='utf-8',
             errors='replace',
             timeout=timeout,
+            env=env,
         )
     except subprocess.TimeoutExpired:
         return 99, 'timeout'

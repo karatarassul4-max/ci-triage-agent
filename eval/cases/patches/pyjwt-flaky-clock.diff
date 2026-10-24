@@ -1,0 +1,18 @@
+diff --git a/tests/test_flaky_clock.py b/tests/test_flaky_clock.py
+deleted file mode 100644
+index 8bedf97..0000000
+--- a/tests/test_flaky_clock.py
++++ /dev/null
+@@ -1,12 +0,0 @@
+-import time
+-
+-import jwt
+-
+-KEY = 'a-long-enough-secret-key-for-hs256-tests'
+-
+-
+-def test_token_is_issued_in_current_second():
+-    token = jwt.encode({'iat': int(time.time())}, KEY, algorithm='HS256')
+-    time.sleep(0.2)
+-    payload = jwt.decode(token, KEY, algorithms=['HS256'])
+-    assert payload['iat'] == int(time.time())

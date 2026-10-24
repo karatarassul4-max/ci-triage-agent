@@ -1,0 +1,14 @@
+diff --git a/pyproject.toml b/pyproject.toml
+index ae01b36..bbd2440 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -122,9 +122,6 @@ testpaths = [
+     "tests",
+ ]
+ 
+-[tool.pytest.ini_options]
+-xfail_strict = true
+-
+ [tool.setuptools]
+ include-package-data = true
+ zip-safe = false

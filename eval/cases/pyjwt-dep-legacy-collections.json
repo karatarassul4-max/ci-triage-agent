@@ -1,0 +1,17 @@
+{
+  "id": "pyjwt-dep-legacy-collections",
+  "repo": "pyjwt",
+  "source": "handmade",
+  "repo_url": "https://github.com/jpadilla/pyjwt.git",
+  "base_sha": "16231abfd1d8eab4953e8779b3017b859c88565e",
+  "broken_sha": "b0c2ce9036b4cb34eaa1636513a99bc62da41068",
+  "fix_sha": null,
+  "failing_tests": [],
+  "category": "dependency",
+  "gold_files": [
+    "jwt/utils.py"
+  ],
+  "split": "dev",
+  "fix_verified": false,
+  "description": "Legacy import removed in modern Python versions."
+}

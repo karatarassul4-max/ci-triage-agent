@@ -1,0 +1,12 @@
+diff --git a/tinydb/storages.py b/tinydb/storages.py
+index e23f19f..59337a1 100644
+--- a/tinydb/storages.py
++++ b/tinydb/storages.py
+@@ -7,7 +7,6 @@ import io
+ import json
+ import os
+ import warnings
+-import yaml
+ from abc import ABC, abstractmethod
+ from typing import Any, Optional
+ 

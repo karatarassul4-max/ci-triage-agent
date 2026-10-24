@@ -1,0 +1,17 @@
+diff --git a/tests/test_flaky_random.py b/tests/test_flaky_random.py
+deleted file mode 100644
+index 8bd0e80..0000000
+--- a/tests/test_flaky_random.py
++++ /dev/null
+@@ -1,11 +0,0 @@
+-import random
+-
+-from tinydb import TinyDB, where
+-from tinydb.storages import MemoryStorage
+-
+-
+-def test_random_document_is_found():
+-    db = TinyDB(storage=MemoryStorage)
+-    db.insert_multiple([{'n': i} for i in range(10)])
+-    target = random.randint(0, 11)
+-    assert db.get(where('n') == target) is not None
