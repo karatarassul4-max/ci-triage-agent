@@ -166,23 +166,23 @@ def diagnose(messages):
             temperature=0.2,
             max_completion_tokens=1500,
         )
-    except BadRequestError:
-        return 'bad_request', None, 0
+    except BadRequestError as error:
+        return 'bad_request', None, 0, str(error)[:500]
     tokens = resp.usage.total_tokens
     calls = resp.choices[0].message.tool_calls
     if not calls:
-        return 'no_tool_call', None, tokens
+        return 'no_tool_call', None, tokens, ''
     try:
         diagnosis = json.loads(calls[0].function.arguments)
     except json.JSONDecodeError:
-        return 'parse_error', None, tokens
-    return 'ok', diagnosis, tokens
+        return 'parse_error', None, tokens, ''
+    return 'ok', diagnosis, tokens, ''
 
 
 def run_variant(variant, case):
     log = (LOGS_DIR / (case['id'] + '.log')).read_text(encoding='utf-8')
     messages = build_messages(variant, case, log)
-    status, diagnosis, tokens = diagnose(messages)
+    status, diagnosis, tokens, error = diagnose(messages)
 
     result = {
         'case_id': case['id'],
@@ -195,6 +195,7 @@ def run_variant(variant, case):
         'file_precision': 0.0,
         'file_recall': 0.0,
         'total_tokens': tokens,
+        'error': error,
     }
     if status == 'ok':
         files = diagnosis.get('root_cause_files', [])

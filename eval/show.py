@@ -13,7 +13,9 @@ def main(variant, split):
         row = json.loads(line)
         case = cases[row['case_id']]
         print('==', row['case_id'], row['status'], 'tokens:', row['total_tokens'])
-        print('   gold files :', case['gold_files'])
+        print('   gold files :', case['gold_files'], '| gold category:', case['category'])
+        if row.get('error'):
+            print('   error      :', row['error'])
         pred = row['prediction']
         if pred:
             print('   pred files :', pred.get('root_cause_files'), 'hit:', row['file_hit'])
