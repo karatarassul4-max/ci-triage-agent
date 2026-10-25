@@ -201,6 +201,9 @@ def run_variant(variant, case):
         files = diagnosis.get('root_cause_files', [])
         if not isinstance(files, list):
             files = []
+        files = [f for f in files if str(f).strip()]
+        if not files:
+            result['status'] = 'empty_answer'
         gold = case['gold_files']
         result['category_correct'] = category_correct(diagnosis.get('category'), case['category'])
         result['file_hit'] = file_hit(files, gold)

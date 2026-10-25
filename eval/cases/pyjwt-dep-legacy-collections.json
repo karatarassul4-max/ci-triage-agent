@@ -7,7 +7,7 @@
   "broken_sha": "b0c2ce9036b4cb34eaa1636513a99bc62da41068",
   "fix_sha": null,
   "failing_tests": [],
-  "category": "dependency",
+  "category": "code_bug",
   "gold_files": [
     "jwt/utils.py"
   ],

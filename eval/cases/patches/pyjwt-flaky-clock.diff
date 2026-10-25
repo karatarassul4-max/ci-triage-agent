@@ -1,7 +1,7 @@
-diff --git a/tests/test_flaky_clock.py b/tests/test_flaky_clock.py
+diff --git a/tests/test_token_issue_time.py b/tests/test_token_issue_time.py
 deleted file mode 100644
 index 8bedf97..0000000
---- a/tests/test_flaky_clock.py
+--- a/tests/test_token_issue_time.py
 +++ /dev/null
 @@ -1,12 +0,0 @@
 -import time

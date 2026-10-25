@@ -4,14 +4,14 @@
   "source": "handmade",
   "repo_url": "https://github.com/msiemens/tinydb.git",
   "base_sha": "edff96aeb2616402e9489d46e90a592c05565621",
-  "broken_sha": "0e3d671870c05fbd5bde14a5b0a7ce95f862ee8f",
+  "broken_sha": "58ec86c48ef7eeb4361bf371b364825a3b3c54eb",
   "fix_sha": null,
   "failing_tests": [
-    "tests/test_flaky_random.py::test_random_document_is_found"
+    "tests/test_document_lookup.py::test_random_document_is_found"
   ],
   "category": "flaky_test",
   "gold_files": [
-    "tests/test_flaky_random.py"
+    "tests/test_document_lookup.py"
   ],
   "split": "dev",
   "fix_verified": false,

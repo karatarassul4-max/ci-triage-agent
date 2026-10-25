@@ -4,14 +4,14 @@
   "source": "handmade",
   "repo_url": "https://github.com/jpadilla/pyjwt.git",
   "base_sha": "16231abfd1d8eab4953e8779b3017b859c88565e",
-  "broken_sha": "cfa08198ba4b206750cc2fca85854f6340584fc2",
+  "broken_sha": "c451bed72f8623959acd383bc28744abd417af6b",
   "fix_sha": null,
   "failing_tests": [
-    "tests/test_flaky_clock.py::test_token_is_issued_in_current_second"
+    "tests/test_token_issue_time.py::test_token_is_issued_in_current_second"
   ],
   "category": "flaky_test",
   "gold_files": [
-    "tests/test_flaky_clock.py"
+    "tests/test_token_issue_time.py"
   ],
   "split": "dev",
   "fix_verified": false,
